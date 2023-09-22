@@ -1,5 +1,5 @@
-@include('back-end.master')
+@extends('back-end.master')
 
 @section('content')
-    <h1>Dashboard</h1>
+    <h1>Hello Dashboard</h1>
 @endsection

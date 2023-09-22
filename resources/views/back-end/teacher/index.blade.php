@@ -1,5 +1,5 @@
 @extends('back-end.master')
 
 @section('content')
-    <h1>Hellloooo</h1>
+    <h1>Hello Teacher</h1>
 @endsection

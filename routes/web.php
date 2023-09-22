@@ -16,5 +16,5 @@ use App\Http\Controllers\Admin\TeacherController;
 |
 */
 
-//Route::get('/admin/dashboard', [TeacherController::class,'dashboard'])->name('admin.dashboard');
+Route::get('/', [TeacherController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/admin/teacher', [TeacherController::class,'index'])->name('admin.teacher');
