@@ -16,4 +16,9 @@ class TeacherController extends Controller
         return view('back-end.dashboard.index');
     }
 
+    public function create()
+    {
+        return view('back-end.teacher.create');
+    }
+
 }
