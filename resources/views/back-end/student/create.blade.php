@@ -5,11 +5,11 @@
     <div class="space-y-10 divide-y divide-gray-900/10">
         <div class="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-3">
             <div class="px-4 sm:px-0">
-                <h2 class="text-base font-semibold leading-7 text-gray-900">Teacher</h2>
-                <p class="mt-1 text-sm leading-6 text-gray-600">This form is to insert info's of teacher.</p>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Student</h2>
+                <p class="mt-1 text-sm leading-6 text-gray-600">This form is to insert info's of Student.</p>
             </div>
             
-            <form class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2" method="post" action="{{ route('admin.teacher.store') }}" enctype="multipart/form-data">
+            <form class="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2" method="post" action="{{ route('admin.student.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="px-4 py-6 sm:p-8">
                     @if ($errors->any())
@@ -55,16 +55,6 @@
                         <div class="mt-2">
                             <textarea type="text" name="address" id="address" autocomplete="address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"> {{ old('address') }} </textarea>
                         </div>
-                    </div>
-                    <div class="sm:col-span-4">
-                            <label for="major_id" class="block text-sm font-medium leading-6 text-gray-900">Major</label>
-                            <div class="mt-2">
-                                <select id="major_id" name="major_id" autocomplete="major_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                                    <option {{old('major_id')==1 ? selected : ''}} value="">Select</option>
-                                    <option {{old('major_id')==2 ? selected : ''}} value="1">PHP</option>
-                                    <option value="2">Mysql</option>
-                                </select>
-                            </div>
                     </div>
                 </div>
         </div>
