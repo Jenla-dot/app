@@ -41,5 +41,4 @@ class TeacherController extends Controller
         $teacher->save();
         return redirect(route(name:'admin.teacher'));
     }
-
 }

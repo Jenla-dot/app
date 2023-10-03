@@ -16,6 +16,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 @foreach ($errors->all() as $error)
+
                                     <li class=" text-red-600 ">{{ $error }}</li>
                                 @endforeach
                             </ul>
@@ -37,35 +38,42 @@
                                     <option {{ old('gender')==2 ? 'selected' : ''}} value="2">Female</option>
                                 </select>
                             </div>
-                    </div>
-                    <div class="col-span-full">
+                        </div>
+
+                        <div class="col-span-full">
                             <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
                             <div class="mt-2">
-                                <input type="text" name="phone" id="phone" value="{{ old('phone') }}"autocomplete="phone" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <input type="text" name="phone" id="phone" value="{{ old('phone') }}" autocomplete="phone" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
-                    <div class="col-span-full">
-                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
-                        <div class="mt-2">
-                            <input type="text" name="email" id="email" value="{{ old('email') }}"autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" >
+
+                        <div class="col-span-full">
+                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                            <div class="mt-2">
+                                <input type="text" name="email" value="{{ old('email') }}" id="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-span-full">
-                        <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
-                        <div class="mt-2">
-                            <textarea type="text" name="address" id="address" autocomplete="address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"> {{ old('address') }} </textarea>
+
+                        <div class="col-span-full">
+                            <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <div class="mt-2">
+                                <textarea type="text" name="address" id="address" autocomplete="address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"> {{ old('address') }}</textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sm:col-span-4">
+
+                        <div class="col-span-full">
                             <label for="major_id" class="block text-sm font-medium leading-6 text-gray-900">Major</label>
                             <div class="mt-2">
-                                <select id="major_id" name="major_id" autocomplete="major_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                                    <option {{old('major_id')==1 ? selected : ''}} value="">Select</option>
-                                    <option {{old('major_id')==2 ? selected : ''}} value="1">PHP</option>
-                                    <option value="2">Mysql</option>
+                                <select id="major_id" name="major_id" autocomplete="major_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option>Select</option>
+                                    <option {{ old('major_id')==1 ? 'selected' : ''}} value="1">PHP</option>
+                                    <option {{ old('major_id')==2 ? 'selected' : ''}} value="2">Mysql</option>
                                 </select>
                             </div>
+                        </div>
+
                     </div>
+                   
                 </div>
         </div>
                 <div class="flex items-center justify-end gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
@@ -74,8 +82,6 @@
                 </div>
             </form>
         </div>
-
-        
     </div>
 
 @endsection
